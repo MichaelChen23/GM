@@ -4,9 +4,9 @@
 
 	<!-- 通用查询结果列 -->
 	<sql id="Base_Column_List">
-		id, account, nickname, password, account_type, email, rank, amount, score,
-			account_is_active, lock_status, lock_start_time, lock_end_time, last_login_time,
-				create_time, modify_time, address_id
+		id, account, name, nickname, password, account_type, email, rank, amount, score,
+			if_active, lock_status, lock_start_time, lock_end_time, last_login_time,
+				address_id, create_account, create_time, update_account, update_time
 	</sql>
 
 </mapper>

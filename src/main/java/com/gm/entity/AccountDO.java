@@ -12,10 +12,14 @@ import com.baomidou.mybatisplus.annotations.TableName;
  */
 @TableName("gm_account")
 public class AccountDO implements Serializable {
-	
+
+	private static final long serialVersionUID = 1L;
+
 	private Integer id;
 	
 	private String account;
+	
+	private String name;
 	
 	private String nickname;
 	
@@ -29,11 +33,11 @@ public class AccountDO implements Serializable {
 	
 	private Double amount;
 	
-	private Integer score;
+	private Double score;
 	
-	private Integer accountIsActive;
+	private String ifActive;
 	
-	private Integer lockStatus;
+	private String ifLock;
 	
 	private Date lockStartTime;
 	
@@ -41,11 +45,15 @@ public class AccountDO implements Serializable {
 	
 	private Date lastLoginTime;
 	
+	private Integer addressId;
+	
+	private String createAccount;
+	
 	private Date createTime;
 	
-	private Date modifyTime;
+	private String updateAccount;
 	
-	private Integer addressId;
+	private Date updateTime;
 
 	public Integer getId() {
 		return id;
@@ -61,6 +69,14 @@ public class AccountDO implements Serializable {
 
 	public void setAccount(String account) {
 		this.account = account;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getNickname() {
@@ -111,28 +127,28 @@ public class AccountDO implements Serializable {
 		this.amount = amount;
 	}
 
-	public Integer getScore() {
+	public Double getScore() {
 		return score;
 	}
 
-	public void setScore(Integer score) {
+	public void setScore(Double score) {
 		this.score = score;
 	}
 
-	public Integer getAccountIsActive() {
-		return accountIsActive;
+	public String getIfActive() {
+		return ifActive;
 	}
 
-	public void setAccountIsActive(Integer accountIsActive) {
-		this.accountIsActive = accountIsActive;
+	public void setIfActive(String ifActive) {
+		this.ifActive = ifActive;
 	}
 
-	public Integer getLockStatus() {
-		return lockStatus;
+	public String getIfLock() {
+		return ifLock;
 	}
 
-	public void setLockStatus(Integer lockStatus) {
-		this.lockStatus = lockStatus;
+	public void setIfLock(String ifLock) {
+		this.ifLock = ifLock;
 	}
 
 	public Date getLockStartTime() {
@@ -159,22 +175,6 @@ public class AccountDO implements Serializable {
 		this.lastLoginTime = lastLoginTime;
 	}
 
-	public Date getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-
-	public Date getModifyTime() {
-		return modifyTime;
-	}
-
-	public void setModifyTime(Date modifyTime) {
-		this.modifyTime = modifyTime;
-	}
-
 	public Integer getAddressId() {
 		return addressId;
 	}
@@ -183,19 +183,47 @@ public class AccountDO implements Serializable {
 		this.addressId = addressId;
 	}
 
+	public String getCreateAccount() {
+		return createAccount;
+	}
+
+	public void setCreateAccount(String createAccount) {
+		this.createAccount = createAccount;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public String getUpdateAccount() {
+		return updateAccount;
+	}
+
+	public void setUpdateAccount(String updateAccount) {
+		this.updateAccount = updateAccount;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
+
 	@Override
 	public String toString() {
-		return "AccountDO [id=" + id + ", account=" + account + ", nickname="
-				+ nickname + ", password=" + password + ", accountType="
-				+ accountType + ", email=" + email + ", rank=" + rank
-				+ ", amount=" + amount + ", score=" + score
-				+ ", accountIsActive=" + accountIsActive + ", lockStatus="
-				+ lockStatus + ", lockStartTime=" + lockStartTime
-				+ ", lockEndTime=" + lockEndTime + ", lastLoginTime="
-				+ lastLoginTime + ", createTime=" + createTime
-				+ ", modifyTime=" + modifyTime + ", addressId=" + addressId
-				+ "]";
+		return "AccountDO [id=" + id + ", account=" + account + ", name=" + name + ", nickname=" + nickname
+				+ ", password=" + password + ", accountType=" + accountType + ", email=" + email + ", rank=" + rank
+				+ ", amount=" + amount + ", score=" + score + ", ifActive=" + ifActive + ", ifLock=" + ifLock
+				+ ", lockStartTime=" + lockStartTime + ", lockEndTime=" + lockEndTime + ", lastLoginTime="
+				+ lastLoginTime + ", addressId=" + addressId + ", createAccount=" + createAccount + ", createTime="
+				+ createTime + ", updateAccount=" + updateAccount + ", updateTime=" + updateTime + "]";
 	}
-	
+
 	
 }
