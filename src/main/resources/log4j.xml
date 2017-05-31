@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+	<appender name="infolog" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/gm.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} %p [%c-%M-%L]:%m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="INFO" />
+			<param name="LevelMax" value="WARN" />
+		</filter>
+	</appender>
+
+	<appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} %p [%c-%M-%L]:%m%n" />
+		</layout>
+	</appender>
+	
+	<!-- 输出日志到文件  文件大小到达指定尺寸的时候产生一个新的文件 -->  
+    <appender name="appServerLog" class="org.apache.log4j.RollingFileAppender">  
+        <param name="File" value="logs/gmServerLog.log"></param>  
+        <param name="ImmediateFlush" value="true"/>  
+        <param name="Threshold" value="info"></param>  
+        <param name="Append" value="true"></param>  
+        <param name="DatePattern" value="'.'yyyy-MM-dd'.log'" />     
+        <param name="MaxFileSize" value="102400KB"></param>  
+        <param name="MaxBackupIndex" value="100"></param>  
+        <layout class="org.apache.log4j.PatternLayout">  
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} %p [%c-%M-%L]:%m%n"></param>  
+        </layout>  
+    </appender>
+	
+	 <!-- 下面是打印 mybatis语句的配置 -->  
+    <logger name="com.ibatis" additivity="true">  
+        <level value="INFO" />  
+    </logger>  
+  
+    <logger name="java.database.Connection" additivity="true">
+        <level value="INFO" />  
+    </logger>  
+  
+    <logger name="java.database.Statement" additivity="true">
+        <level value="INFO" />  
+    </logger>  
+  
+    <logger name="java.database.PreparedStatement" additivity="true">
+        <level value="INFO" />  
+    </logger>  
+  
+    <logger name="java.database.ResultSet" additivity="true">
+        <level value="INFO" />  
+    </logger>  
+	
+	<root>
+		<priority value="DEBUG" />
+        <appender-ref ref="stdout" />
+	</root>
+</log4j:configuration>
