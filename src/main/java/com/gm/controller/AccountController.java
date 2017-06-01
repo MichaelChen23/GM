@@ -49,7 +49,7 @@ public class AccountController {
 	@ResponseBody
 	public BaseResponse<Boolean> removeAccount(@RequestBody AccountDO accountDO) {
 		try {
-			boolean result = accountService.delete(new EntityWrapper<AccountDO>(accountDO));
+			Boolean result = accountService.delete(new EntityWrapper<AccountDO>(accountDO));
 			return new BaseResponse<>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, result);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
@@ -61,7 +61,7 @@ public class AccountController {
 	@ResponseBody
 	public BaseResponse<Boolean> updateAccount(@RequestBody AccountDO accountDO) {
 		try {
-			boolean result = accountService.updateById(accountDO);
+			Boolean result = accountService.updateById(accountDO);
 			return new BaseResponse<>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, result);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
