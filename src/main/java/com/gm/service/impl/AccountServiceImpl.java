@@ -8,7 +8,7 @@ import com.gm.entity.AccountDO;
 import com.gm.service.IAccountService;
 
 /**
- * ¿Í»§Service·şÎñ²ã½Ó¿ÚÊµÏÖ
+ * å®¢æˆ·ServiceæœåŠ¡å±‚æ¥å£å®ç°
  * @author MC
  * @date 2017-5-18
  */

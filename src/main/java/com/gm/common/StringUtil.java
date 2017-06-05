@@ -3,14 +3,14 @@ package com.gm.common;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * ³£ÓÃ¹¤¾ßÀà
+ * å¸¸ç”¨å·¥å…·ç±»
  * @author MC
  * @date 2017-5-31
  */
 public class StringUtil {
 
 	/**
-	 * ÅĞ¶Ï²éÑ¯·ÖÒ³µÄÒ³Ãæ²ÎÊıÊÇ·ñÎªnull£¬ÔÙÉèÖÃÄ¬ÈÏÖµ
+	 * åˆ¤æ–­æŸ¥è¯¢åˆ†é¡µçš„é¡µé¢å‚æ•°æ˜¯å¦ä¸ºnullï¼Œå†è®¾ç½®é»˜è®¤å€¼
 	 * @param param
 	 * @param defaultInt
 	 * @return

@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.service.IService;
 import com.gm.entity.AccountDO;
 
 /**
- * ¿Í»§Service·şÎñ²ã½Ó¿Ú
+ * å®¢æˆ·ServiceæœåŠ¡å±‚æ¥å£
  * @author MC
  * @date 2017-5-18
  */

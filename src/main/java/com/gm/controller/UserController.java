@@ -19,6 +19,11 @@ import com.gm.common.StringUtil;
 import com.gm.entity.UserDO;
 import com.gm.service.IUserService;
 
+/**
+ * 用户Controller控制层
+ * @author MC
+ * @date 2017-5-19
+ */
 @Controller
 @RequestMapping("/user")
 public class UserController {

@@ -1,7 +1,7 @@
 package com.gm.common;
 
 /**
- * ³£Á¿Àà
+ * å¸¸é‡ç±»
  * @author MC
  * @date 2017-5-31
  */
@@ -9,7 +9,7 @@ public abstract class Constant {
 	
 	public static final String SUCCESS_CODE = "200";
 	
-	public static final String SUCCESS_MSG = "³É¹¦";
+	public static final String SUCCESS_MSG = "æˆåŠŸ";
 	
 	public static final Integer DEFAULT_CURRENT_PAGE = 1;
 	

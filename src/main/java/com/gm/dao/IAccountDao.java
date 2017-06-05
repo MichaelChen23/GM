@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.gm.entity.AccountDO;
 
 /**
- * 客户DAO数据访问
+ * 瀹㈡埛DAO鏁版嵁璁块棶
  * @author MC
  * @date 2017-5-18
  */

@@ -6,7 +6,7 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableName;
 
 /**
- * ¿Í»§±í
+ * å®¢æˆ·è¡¨å®žä½“
  * @author MC
  * @date 2017-5-18
  */

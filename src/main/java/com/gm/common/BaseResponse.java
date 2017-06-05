@@ -3,7 +3,7 @@ package com.gm.common;
 import java.io.Serializable;
 
 /**
- * »ù´¡·µ»ØÀà
+ * åŸºç¡€è¿”å›ç±»
  * @author MC
  * @date 2017-5-31
  * @param <T>
@@ -12,22 +12,22 @@ public class BaseResponse<T> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	//·µ»Ø±àÂë
+	//è¿”å›ç¼–ç 
 	private String code;
 	
-	//·µ»ØÏûÏ¢
+	//è¿”å›æ¶ˆæ¯
 	private String msg;
 	
-	//·µ»ØÊµÌå
-	private T t;
+	//è¿”å›å®ä½“
+	private T result;
 	
 	public BaseResponse(){}
 
-	public BaseResponse(String code, String msg, T t) {
+	public BaseResponse(String code, String msg, T result) {
 		super();
 		this.code = code;
 		this.msg = msg;
-		this.t = t;
+		this.result = result;
 	}
 
 	public String getCode() {
@@ -46,12 +46,12 @@ public class BaseResponse<T> implements Serializable {
 		this.msg = msg;
 	}
 
-	public T getT() {
-		return t;
+	public T getResult() {
+		return result;
 	}
 
-	public void setT(T t) {
-		this.t = t;
+	public void setResult(T result) {
+		this.result = result;
 	}
 
 }

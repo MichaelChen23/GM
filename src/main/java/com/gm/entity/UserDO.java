@@ -5,6 +5,11 @@ import java.util.Date;
 
 import com.baomidou.mybatisplus.annotations.TableName;
 
+/**
+ * 用户表实体
+ * @author MC
+ * @date 2017-5-19
+ */
 @TableName("gm_user")
 public class UserDO implements Serializable {
 

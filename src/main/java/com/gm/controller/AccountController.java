@@ -20,7 +20,7 @@ import com.gm.entity.AccountDO;
 import com.gm.service.IAccountService;
 
 /**
- * ¿Í»§Controller¿ØÖÆ²ã
+ * å®¢æˆ·ControlleræŽ§åˆ¶å±‚
  * @author MC
  * @date 2017-5-18
  */
