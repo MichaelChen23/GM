@@ -16,28 +16,28 @@ import com.baomidou.mybatisplus.plugins.Page;
 import com.gm.common.BaseResponse;
 import com.gm.common.Constant;
 import com.gm.common.StringUtil;
-import com.gm.entity.AccountDO;
-import com.gm.service.IAccountService;
+import com.gm.entity.AccountRankDO;
+import com.gm.service.IAccountRankService;
 
 /**
- * 客户Controller控制层
+ * 客户等级Controller控制层
  * @author MC
- * @date 2017-5-18
+ * @date 2017-6-6
  */
 @Controller
-@RequestMapping("/account")
-public class AccountController {
+@RequestMapping("/account-rank")
+public class AccountRankController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(AccountController.class);
+	private static final Logger logger = LoggerFactory.getLogger(AccountRankController.class);
 	
 	@Autowired
-	private IAccountService accountService;
+	private IAccountRankService accountRankService;
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	@ResponseBody
-	public BaseResponse<Boolean> saveAccount(@RequestBody AccountDO accountDO){
+	public BaseResponse<Boolean> saveAccountRank(@RequestBody AccountRankDO accountRankDO){
 		try {
-			Boolean result = accountService.insert(accountDO);
+			Boolean result = accountRankService.insert(accountRankDO);
 			return new BaseResponse<Boolean>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, result);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
@@ -47,9 +47,9 @@ public class AccountController {
 	
 	@RequestMapping(value = "/remove", method = RequestMethod.POST)
 	@ResponseBody
-	public BaseResponse<Boolean> removeAccount(@RequestBody AccountDO accountDO) {
+	public BaseResponse<Boolean> removeAccountRank(@RequestBody AccountRankDO accountRankDO) {
 		try {
-			Boolean result = accountService.delete(new EntityWrapper<AccountDO>(accountDO));
+			Boolean result = accountRankService.delete(new EntityWrapper<AccountRankDO>(accountRankDO));
 			return new BaseResponse<Boolean>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, result);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
@@ -59,9 +59,9 @@ public class AccountController {
 	
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
 	@ResponseBody
-	public BaseResponse<Boolean> updateAccount(@RequestBody AccountDO accountDO) {
+	public BaseResponse<Boolean> updateAccountRank(@RequestBody AccountRankDO accountRankDO) {
 		try {
-			Boolean result = accountService.updateById(accountDO);
+			Boolean result = accountRankService.updateById(accountRankDO);
 			return new BaseResponse<Boolean>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, result);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
@@ -71,10 +71,10 @@ public class AccountController {
 	
 	@RequestMapping(value = "/get", method = RequestMethod.POST)
 	@ResponseBody
-	public BaseResponse<AccountDO> getAccount(@RequestBody AccountDO accountDO) {
+	public BaseResponse<AccountRankDO> getAccountRank(@RequestBody AccountRankDO accountRankDO) {
 		try {
-			AccountDO account = accountService.selectOne(new EntityWrapper<AccountDO>(accountDO));
-			return new BaseResponse<AccountDO>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, account);
+			AccountRankDO accountRank = accountRankService.selectOne(new EntityWrapper<AccountRankDO>(accountRankDO));
+			return new BaseResponse<AccountRankDO>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, accountRank);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 			return null;
@@ -83,13 +83,13 @@ public class AccountController {
 	
 	@RequestMapping(value = "/pagelist", method = RequestMethod.POST)
 	@ResponseBody
-	public BaseResponse<Page<AccountDO>> pageListAccount(HttpServletRequest request, @RequestBody AccountDO accountDO) {
+	public BaseResponse<Page<AccountRankDO>> pageListAccount(HttpServletRequest request, @RequestBody AccountRankDO accountRankDO) {
 		String currentPage = request.getParameter("currentpage");
 		String pageSize = request.getParameter("pagesize");
 		try {
-			Page<AccountDO> accountDOs = accountService.selectPage(new Page<AccountDO>(StringUtil.checkPageOrDefault(currentPage, Constant.DEFAULT_CURRENT_PAGE), 
-					StringUtil.checkPageOrDefault(pageSize, Constant.DEFAULT_PAGE_SIZE)), new EntityWrapper<AccountDO>(accountDO));
-			return new BaseResponse<Page<AccountDO>>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, accountDOs);
+			Page<AccountRankDO> accountRankDOs = accountRankService.selectPage(new Page<AccountRankDO>(StringUtil.checkPageOrDefault(currentPage, Constant.DEFAULT_CURRENT_PAGE), 
+					StringUtil.checkPageOrDefault(pageSize, Constant.DEFAULT_PAGE_SIZE)), new EntityWrapper<AccountRankDO>(accountRankDO));
+			return new BaseResponse<Page<AccountRankDO>>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, accountRankDOs);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 			return null;

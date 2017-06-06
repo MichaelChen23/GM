@@ -38,7 +38,7 @@ public class UserController {
 	public BaseResponse<Boolean> saveUser(@RequestBody UserDO userDO){
 		try {
 			Boolean result = userService.insert(userDO);
-			return new BaseResponse<>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, result);
+			return new BaseResponse<Boolean>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, result);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 			return null;
@@ -50,7 +50,7 @@ public class UserController {
 	public BaseResponse<Boolean> removeUser(@RequestBody UserDO userDO) {
 		try {
 			Boolean result = userService.delete(new EntityWrapper<UserDO>(userDO));
-			return new BaseResponse<>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, result);
+			return new BaseResponse<Boolean>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, result);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 			return null;
@@ -62,7 +62,7 @@ public class UserController {
 	public BaseResponse<Boolean> updateUser(@RequestBody UserDO userDO) {
 		try {
 			Boolean result = userService.updateById(userDO);
-			return new BaseResponse<>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, result);
+			return new BaseResponse<Boolean>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, result);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 			return null;
@@ -89,7 +89,7 @@ public class UserController {
 		try {
 			Page<UserDO> userDOs = userService.selectPage(new Page<UserDO>(StringUtil.checkPageOrDefault(currentPage, Constant.DEFAULT_CURRENT_PAGE), 
 					StringUtil.checkPageOrDefault(pageSize, Constant.DEFAULT_PAGE_SIZE)), new EntityWrapper<UserDO>(userDO));
-			return new BaseResponse<>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, userDOs);
+			return new BaseResponse<Page<UserDO>>(Constant.SUCCESS_CODE, Constant.SUCCESS_MSG, userDOs);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 			return null;
