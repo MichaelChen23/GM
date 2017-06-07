@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gm.dao.account.IAccountDao">
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		id, account, name, nickname, password, account_type, email, rank, amount, score,
+			if_active, lock_status, lock_start_time, lock_end_time, last_login_time,
+				address_id, create_account, create_time, update_account, update_time
+	</sql>
+
+</mapper>
