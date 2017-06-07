@@ -13,7 +13,7 @@ import com.gm.entity.account.AccountRankDO;
  * @date 2017-6-6
  */
 @Controller
-@RequestMapping("/account-rank")
+@RequestMapping("/acct-rank")
 public class AccountRankController extends BaseController<IService<AccountRankDO>, AccountRankDO> {
 
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gm.dao.product.IProductActivityDao">
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		id, name, account_range, content, status, activity_type, discount_type, discount, discount_unit,
+			right_price, max_sell_count, min_group_count, group_price, in_group_person, remark, 
+				create_account, create_time, update_account, update_time
+	</sql>
+
+</mapper>

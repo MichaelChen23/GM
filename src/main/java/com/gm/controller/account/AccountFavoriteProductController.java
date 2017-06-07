@@ -13,7 +13,7 @@ import com.gm.entity.account.AccountFavoriteProductDO;
  * @date 2017-6-6
  */
 @Controller
-@RequestMapping("/account-favor-prod")
+@RequestMapping("/favor-prod")
 public class AccountFavoriteProductController extends BaseController<IService<AccountFavoriteProductDO>, AccountFavoriteProductDO> {
 	
 }

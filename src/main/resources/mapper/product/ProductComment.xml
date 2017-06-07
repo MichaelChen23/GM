@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gm.dao.product.IProductCommentDao">
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		id, product_id, account, nickname, order_id, content, star, if_show, reply,
+			create_time, replier, reply_time, remark
+	</sql>
+
+</mapper>

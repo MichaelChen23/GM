@@ -13,7 +13,7 @@ import com.gm.entity.account.AccountAddressDO;
  * @date 2017-6-6
  */
 @Controller
-@RequestMapping("/account-address")
+@RequestMapping("/acct-address")
 public class AccountAddressController extends BaseController<IService<AccountAddressDO>, AccountAddressDO> {
 	
 }
