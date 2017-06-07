@@ -6,32 +6,28 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableName;
 
 /**
- * 用户表实体
+ * 资源表实体
  * @author MC
- * @date 2017-5-19
+ * @date 2017-6-8
  */
-@TableName("gm_user")
-public class UserDO implements Serializable {
+@TableName("gm_resource")
+public class ResourceDO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	private Integer id;
 
-	private String username;
-
-	private String password;
-	
 	private String name;
+
+	private String url;
 	
-	private String phone;
+	private Integer pid;
 	
-	private String email;
+	private Integer sort;
 	
-	private Integer roleId;
+	private String type;
 	
-	private String status;
-	
-	private Date lastLoginTime;
+	private String authority;
 	
 	private String createAccount;
 
@@ -49,22 +45,6 @@ public class UserDO implements Serializable {
 		this.id = id;
 	}
 
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -73,44 +53,44 @@ public class UserDO implements Serializable {
 		this.name = name;
 	}
 
-	public String getPhone() {
-		return phone;
+	public String getUrl() {
+		return url;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
-	public String getEmail() {
-		return email;
+	public Integer getPid() {
+		return pid;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPid(Integer pid) {
+		this.pid = pid;
 	}
 
-	public Integer getRoleId() {
-		return roleId;
+	public Integer getSort() {
+		return sort;
 	}
 
-	public void setRoleId(Integer roleId) {
-		this.roleId = roleId;
+	public void setSort(Integer sort) {
+		this.sort = sort;
 	}
 
-	public String getStatus() {
-		return status;
+	public String getType() {
+		return type;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	public void setType(String type) {
+		this.type = type;
 	}
 
-	public Date getLastLoginTime() {
-		return lastLoginTime;
+	public String getAuthority() {
+		return authority;
 	}
 
-	public void setLastLoginTime(Date lastLoginTime) {
-		this.lastLoginTime = lastLoginTime;
+	public void setAuthority(String authority) {
+		this.authority = authority;
 	}
 
 	public String getCreateAccount() {

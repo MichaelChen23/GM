@@ -6,32 +6,24 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableName;
 
 /**
- * 用户表实体
+ * 角色表实体
  * @author MC
- * @date 2017-5-19
+ * @date 2017-6-8
  */
-@TableName("gm_user")
-public class UserDO implements Serializable {
+@TableName("gm_role")
+public class RoleDO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	private Integer id;
 
-	private String username;
-
-	private String password;
-	
 	private String name;
-	
-	private String phone;
-	
-	private String email;
-	
-	private Integer roleId;
+
+	private String description;
 	
 	private String status;
 	
-	private Date lastLoginTime;
+	private String remark;
 	
 	private String createAccount;
 
@@ -49,22 +41,6 @@ public class UserDO implements Serializable {
 		this.id = id;
 	}
 
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -73,28 +49,12 @@ public class UserDO implements Serializable {
 		this.name = name;
 	}
 
-	public String getPhone() {
-		return phone;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public Integer getRoleId() {
-		return roleId;
-	}
-
-	public void setRoleId(Integer roleId) {
-		this.roleId = roleId;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public String getStatus() {
@@ -105,12 +65,12 @@ public class UserDO implements Serializable {
 		this.status = status;
 	}
 
-	public Date getLastLoginTime() {
-		return lastLoginTime;
+	public String getRemark() {
+		return remark;
 	}
 
-	public void setLastLoginTime(Date lastLoginTime) {
-		this.lastLoginTime = lastLoginTime;
+	public void setRemark(String remark) {
+		this.remark = remark;
 	}
 
 	public String getCreateAccount() {
