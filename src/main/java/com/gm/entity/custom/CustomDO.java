@@ -1,4 +1,4 @@
-package com.gm.entity.account;
+package com.gm.entity.custom;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,8 +10,8 @@ import com.baomidou.mybatisplus.annotations.TableName;
  * @author MC
  * @date 2017-5-18
  */
-@TableName("gm_account")
-public class AccountDO implements Serializable {
+@TableName("gm_custom")
+public class CustomDO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -214,16 +214,5 @@ public class AccountDO implements Serializable {
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
 	}
-
-	@Override
-	public String toString() {
-		return "AccountDO [id=" + id + ", account=" + account + ", name=" + name + ", nickname=" + nickname
-				+ ", password=" + password + ", accountType=" + accountType + ", email=" + email + ", rank=" + rank
-				+ ", amount=" + amount + ", score=" + score + ", ifActive=" + ifActive + ", ifLock=" + ifLock
-				+ ", lockStartTime=" + lockStartTime + ", lockEndTime=" + lockEndTime + ", lastLoginTime="
-				+ lastLoginTime + ", addressId=" + addressId + ", createAccount=" + createAccount + ", createTime="
-				+ createTime + ", updateAccount=" + updateAccount + ", updateTime=" + updateTime + "]";
-	}
-
 	
 }

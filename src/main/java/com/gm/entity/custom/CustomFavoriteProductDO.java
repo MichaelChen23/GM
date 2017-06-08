@@ -1,4 +1,4 @@
-package com.gm.entity.account;
+package com.gm.entity.custom;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,14 +10,14 @@ import com.baomidou.mybatisplus.annotations.TableName;
  * @author MC
  * @date 2017-6-6
  */
-@TableName("gm_account_favorite_product")
-public class AccountFavoriteProductDO implements Serializable {
+@TableName("gm_custom_favorite_product")
+public class CustomFavoriteProductDO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	private Integer id;
 	
-	private Integer accountId;
+	private Integer customId;
 	
 	private Integer productId;
 	
@@ -31,12 +31,12 @@ public class AccountFavoriteProductDO implements Serializable {
 		this.id = id;
 	}
 
-	public Integer getAccountId() {
-		return accountId;
+	public Integer getCustomId() {
+		return customId;
 	}
 
-	public void setAccountId(Integer accountId) {
-		this.accountId = accountId;
+	public void setCustomId(Integer customId) {
+		this.customId = customId;
 	}
 
 	public Integer getProductId() {
@@ -54,5 +54,5 @@ public class AccountFavoriteProductDO implements Serializable {
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
-	
+
 }

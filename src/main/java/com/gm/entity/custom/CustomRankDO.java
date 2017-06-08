@@ -1,4 +1,4 @@
-package com.gm.entity.account;
+package com.gm.entity.custom;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,8 +10,8 @@ import com.baomidou.mybatisplus.annotations.TableName;
  * @author MC
  * @date 2017-6-6
  */
-@TableName("gm_account_rank")
-public class AccountRankDO implements Serializable {
+@TableName("gm_custom_rank")
+public class CustomRankDO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
